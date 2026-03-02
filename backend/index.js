@@ -6,7 +6,8 @@ const mongodb = require("./db")
 mongodb ();
  
 app.use(cors({
-  origine:"http://localhost:5175",
+  //origine:"http://localhost:5175" 
+  origine:"https://food-app-1-bkuu.onrender.com",
   methods:["GET","POST","PUT","DELETE"],
   credentials:true
 }));
