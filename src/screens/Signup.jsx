@@ -37,7 +37,7 @@ const navigate = useNavigate();
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name: credential.name, email: credential.email, password: credential.password, location: credential.location }),
+      body: JSON.stringify({ name: credential.name, email: credential.email, password: credential.password}),
 
     
     }
