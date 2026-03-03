@@ -20,6 +20,8 @@ const { JsonWebTokenError } = require('jsonwebtoken');
         async (req,res)=> {
                 const errors = validationResult(req);
                 console.log("errors",errors.isEmpty());
+                console.log("SIGNUP API HIT:");
+                console.log("DB NAME IN CRETEUSER",mongoose.connection.name);
                 console.log("req.body",req.body);
                 //return res.json({sucess :true});
                 if(!errors.isEmpty()){
@@ -36,6 +38,7 @@ const { JsonWebTokenError } = require('jsonwebtoken');
                 email: req.body.email,
                location:req.body.location
         })
+        console.log(" user saved with id:",User._id)
         return res.status(200).json({success:true})
         }
         catch (err){

@@ -6,6 +6,9 @@ const mongodb = async ()=>{
     await mongoose.connect(mongoURI ) ;
    
         console.log("connected");
+        console.log("DB NAME :",mongoose.connection.name);
+         console.log("DB HOST :",mongoose.connection.host);
+          console.log("DB PRT :",mongoose.connection.port);
         const db = mongoose.connection.db;
         const fech_data = db.collection('food_items');
         const data = await fech_data.find({}).toArray()
@@ -14,12 +17,10 @@ const mongodb = async ()=>{
          global.food_category = foodCategory;
          console.log("food item loeded:",data.length);
          console.log("food category loeded:",foodCategory.length);
-       
-        //console.log("data = ", global.food_items);
-       //  console.log("data = ", global.food_category);
+
  }
  catch(err){
-   console.log(' db error = ', err.message);
+   console.log(' db  connection error = ', err.message);
  }
    
 }

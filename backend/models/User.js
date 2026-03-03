@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema ({
     },
     location:{
         type : String,
-        require :true
+        require :false
     },
     city :{
         type : String,
