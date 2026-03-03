@@ -38,7 +38,7 @@ const { JsonWebTokenError } = require('jsonwebtoken');
                 name:req.body.name,
                 password:secpassword,
                 email: req.body.email,
-             //  location:req.body.location
+             //location:req.body.location
         })
         console.log(" user saved with id:",User._id)
         return res.status(200).json({success:true})
